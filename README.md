@@ -1,8 +1,12 @@
-## Perso
+# Perso
 
 This repository has been created to store source code of my personal site.
 
-## Prerequisites
+## Set up
+
+Follow these instructions to deploy the application.
+
+### Prerequisites
 
 Install docker. Use this command on Ubuntu 18.04:
 
@@ -10,7 +14,7 @@ Install docker. Use this command on Ubuntu 18.04:
 snap install docker
 ```
 
-## Installing
+### Installing
 
 Follow these instruction to deploy the docker container and serve the website.
 
