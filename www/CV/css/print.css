@@ -1,0 +1,23 @@
+h1 {
+	color: #5160c9;
+}
+
+#contact {
+	color: #4b4b4b;
+}
+
+#content {
+	padding-bottom: 0px;
+}
+
+.hidden {
+	display: none;
+}
+
+#expand {
+	display: none;
+}
+
+#expand2 {
+	display: none;
+}
