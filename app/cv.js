@@ -14,7 +14,7 @@ cv = {
   ",
   "employmentItems": [
     {
-      "image": "img/amadeus.jpg",
+      "image": "img/amadeus.png",
       "date": "(Jan 2015 - Current)",
       "location": "Nice, France",
       "title": "Senior manager, quality assurance",
@@ -28,7 +28,7 @@ cv = {
       ]
     },
     {
-      "image": "img/amadeus.jpg",
+      "image": "img/amadeus.png",
       "date": "(Mar 2014 - Dec 2014)",
       "location": "Nice, France",
       "title": "Manager, product solutions",
@@ -39,7 +39,7 @@ cv = {
       ]
     },
     {
-      "image": "img/amadeus.jpg",
+      "image": "img/amadeus.png",
       "date": "(Sep 2010 - Mar 2014)",
       "location": "Nice, France",
       "title": "Manager, product development analyst",
@@ -50,7 +50,7 @@ cv = {
       ]
     },
     {
-      "image": "img/amadeus.jpg",
+      "image": "img/amadeus.png",
       "date": "(Dec 2007 - Aug 2010)",
       "location": "Nice, France",
       "title": "Product development analyst",
