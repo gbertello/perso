@@ -1,0 +1,32 @@
+version: '3'
+services:
+  mongo_test:
+    build: mongo/
+    restart: always
+    volumes:
+      - ./mongo/data/test:/data/db
+    networks:
+      - test
+  mongo_express_test:
+    build: mongo_express/
+    restart: always
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongo_test
+      - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER}
+      - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PASSWORD}
+    ports:
+      - 9081:8081
+    networks:
+      - test
+  node_test:
+    build: node/
+    restart: always
+    environment:
+      - ENV=test
+    ports:
+      - 81:80
+    networks:
+      - test
+networks:
+  test:
+    driver: bridge

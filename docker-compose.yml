@@ -1,0 +1,32 @@
+version: '3'
+services:
+  mongo_prod:
+    build: mongo/
+    restart: always
+    volumes:
+      - ./mongo/data/prod:/data/db
+    networks:
+      - prod
+  mongo_express_prod:
+    build: mongo_express/
+    restart: always
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongo_prod
+      - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER}
+      - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PASSWORD}
+    ports:
+      - 8081:8081
+    networks:
+      - prod
+  node_prod:
+    build: node/
+    restart: always
+    environment:
+      - ENV=prod
+    ports:
+      - 80:80
+    networks:
+      - prod
+networks:
+  prod:
+    driver: bridge
