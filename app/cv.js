@@ -5,13 +5,13 @@ cv = {
   "email": "guillaume.bertello@gmail.com",
   "maritalStatus": "Married, 2 children",
   "photo": "img/photo.png",
-  "motivation": `I have 12 years of experience in IT with a solid engineering background. 
-    I like to embrace new challenges in my daily life and this is why I have changed jobs every 3-4 years on average.
-    I have had the opportunity to create from the ground up a QA department for a community of 400 developers.
-    I have led of group of 50 people encompassing all operational and human aspects.
-    I am passionate about engineering practices like agility, continuous integration, continuous delivery, test-driven development and DevOps.
-    I like learning new concepts every day. I do not give up easily. And I like the feeling of getting things done.
-  `,
+  "motivation": "I have 12 years of experience in IT with a solid engineering background. \
+    I like to embrace new challenges in my daily life and this is why I have changed jobs every 3-4 years on average. \
+    I have had the opportunity to create from the ground up a QA department for a community of 400 developers. \
+    I have led of group of 50 people encompassing all operational and human aspects. \
+    I am passionate about engineering practices like agility, continuous integration, continuous delivery, test-driven development and DevOps. \
+    I like learning new concepts every day. I do not give up easily. And I like the feeling of getting things done. \
+  ",
   "employmentItems": [
     {
       "image": "img/amadeus.jpg",
@@ -140,21 +140,20 @@ cv = {
       ]
     }
   ],
-  "programmingSkills": `
-    Web (HTML, CSS, JavaScript, NodeJs, jQuery, PHP), 
-    Data Structures (JSON, XML, CSV, YAML, EDIFACT), 
-    Scripting languages (Python, Ruby), 
-    Containerization (Docker),
-    Web Frameworks (Ruby on Rails, Django), 
-    Mathematics & Statistics (Matlab, R, Numpy, Scikit-learn), 
-    Databases (SQL, MySQL, MongoDB), 
-    Object-Oriented (Java, C, C++), 
-    Methodologies (Agile Kanban & Scrum, CMMI, Test-Driven Development)`,
+  "programmingSkills": "Web (HTML, CSS, JavaScript, NodeJs, jQuery, PHP), \
+    Data Structures (JSON, XML, CSV, YAML, EDIFACT), \
+    Scripting languages (Python, Ruby), \
+    Containerization (Docker),\
+    Web Frameworks (Ruby on Rails, Django), \
+    Mathematics & Statistics (Matlab, R, Numpy, Scikit-learn), \
+    Databases (SQL, MySQL, MongoDB), \
+    Object-Oriented (Java, C, C++), \
+    Methodologies (Agile Kanban & Scrum, CMMI, Test-Driven Development)",
   "personalInterests": [
-    `Music: “Médaille d’or de Formation Musicale” of the Regional Conservatory of Music of Marseille. 
-     Licensed in Piano Jazz curriculum in Conservatory of Music in Antibes. 
-     Performance of piano solo concerts, chamber music and piano concertos with orchestra.`,
-    `Other: Yoga, Golf, Volley-ball, Underwater Diving (level 2), 
-     Table Tennis, driving license (Permis B) and boat license (Permis hauturier)`
+    "Music: “Médaille d’or de Formation Musicale” of the Regional Conservatory of Music of Marseille. \
+     Licensed in Piano Jazz curriculum in Conservatory of Music in Antibes. \
+     Performance of piano solo concerts, chamber music and piano concertos with orchestra.",
+    "Other: Yoga, Golf, Volley-ball, Underwater Diving (level 2), \
+     Table Tennis, driving license (Permis B) and boat license (Permis hauturier)"
   ]
 }
