@@ -1,22 +1,22 @@
 $(document).ready(function () {
-  $('#expand').on('click', function(event) {
+  $('#expandHiddenEducationItems').on('click', function(event) {
     if ($(this).text() == '[+]') {  
-      $(this).text('[-]')
-      $('#to-expand').slideDown();
+      $(this).text('[-]');
+      $('#hiddenEducationItems').slideDown();
     } else {
-      $(this).text('[+]')
-      $('#to-expand').slideUp();
+      $(this).text('[+]');
+      $('#hiddenEducationItems').slideUp();
     }
     event.preventDefault();
   });
 
-  $('#expand2').on('click', function(event) {
+  $('#expandHiddenEmploymentItems').on('click', function(event) {
     if ($(this).text() == '[+]') {  
-      $(this).text('[-]')
-      $('#to-expand2').slideDown();
+      $(this).text('[-]');
+      $('#hiddenEmploymentItems').slideDown();
     } else {
-      $(this).text('[+]')
-      $('#to-expand2').slideUp();
+      $(this).text('[+]');
+      $('#hiddenEmploymentItems').slideUp();
     }
     event.preventDefault();
   });
