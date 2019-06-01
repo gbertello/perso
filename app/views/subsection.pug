@@ -1,11 +1,13 @@
 div.subsection
   div.subsection-left
     div.subsection-logo
-      img
-    div.subsection-date
+      img(src=item["image"])
+    div.subsection-date= item["date"]
   div.subsection-right
-    div.subsection-location
+    div.subsection-location= item["location"]
   div.subsection-center
-    div.subsection-title
+    div.subsection-title= item["title"]
     div.subsection-description
       ul
+        each descriptionItem in item["descriptionItems"]
+          li= descriptionItem

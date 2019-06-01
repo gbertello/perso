@@ -7,7 +7,8 @@ app.set('views','./views');
 app.use(express.static('public'));
 
 app.get('/CV/', function(req, res){
-  res.render('cv');
+  var cv = require("./cv.js");
+  res.render('cv', cv);
 });
 
 app.listen(80);
