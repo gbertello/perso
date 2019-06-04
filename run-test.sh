@@ -1,4 +1,7 @@
-mkdir -p mongo/data/test
+if [ -f ~/.profile ]
+then
+  source ~/.profile
+fi
 
 if [ -z "$MONGO_EXPRESS_USER_TEST" ] 
 then
@@ -14,6 +17,8 @@ then
   echo
   export MONGO_EXPRESS_PASSWORD_TEST=$MONGO_EXPRESS_PASSWORD_TEST
 fi
+
+mkdir -p mongo/mongo_data/test
 
 docker-compose -f docker-compose-test.yml down
 docker-compose -f docker-compose-test.yml build

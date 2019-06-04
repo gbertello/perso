@@ -1,4 +1,7 @@
-mkdir -p mongo/data/prod
+if [ -f ~/.profile ]
+then
+  source ~/.profile
+fi
 
 if [ -z "$MONGO_EXPRESS_USER" ] 
 then
@@ -14,6 +17,8 @@ then
   echo
   export MONGO_EXPRESS_PASSWORD=$MONGO_EXPRESS_PASSWORD
 fi
+
+mkdir -p mongo/mongo_data/prod
 
 docker-compose down
 docker-compose build

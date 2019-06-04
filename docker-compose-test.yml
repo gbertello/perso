@@ -1,13 +1,15 @@
 version: '3'
 services:
   mongo_test:
+    container_name: perso_mongo_test
     build: mongo/
     restart: always
     volumes:
-      - ./mongo/data/test:/data/db
+      - ./mongo/mongo_data/test:/data/db
     networks:
       - test
   mongo_express_test:
+    container_name: perso_mongo_express_test
     build: mongo_express/
     restart: always
     environment:
@@ -19,6 +21,7 @@ services:
     networks:
       - test
   node_test:
+    container_name: perso_node_test
     build: node/
     restart: always
     environment:

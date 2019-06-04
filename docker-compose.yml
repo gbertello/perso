@@ -1,13 +1,15 @@
 version: '3'
 services:
   mongo_prod:
+    container_name: perso_mongo_prod
     build: mongo/
     restart: always
     volumes:
-      - ./mongo/data/prod:/data/db
+      - ./mongo/mongo_data/prod:/data/db
     networks:
       - prod
   mongo_express_prod:
+    container_name: perso_express_prod
     build: mongo_express/
     restart: always
     environment:
@@ -19,6 +21,7 @@ services:
     networks:
       - prod
   node_prod:
+    container_name: perso_node_prod
     build: node/
     restart: always
     environment:
