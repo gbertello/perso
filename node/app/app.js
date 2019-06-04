@@ -4,7 +4,7 @@ var app = express();
 app.set('view engine', 'pug');
 app.set('views','./views');
 
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 app.get('/CV/', function(req, res){
   var MongoClient = require('mongodb').MongoClient
