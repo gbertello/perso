@@ -18,4 +18,8 @@ app.get('/CV/', function(req, res){
   });
 });
 
+app.get('/', function(req, res){
+  res.redirect('/CV');
+});
+
 app.listen(80);
