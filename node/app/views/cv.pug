@@ -12,8 +12,9 @@ html(lang="en")
         h1 !{cv["name"]}
         ul#contact
           li !{cv["address"]}
-          li Tel: !{cv["telephone"]}
-          li !{cv["email"]}
+          li Tel: !{cv["telephone"]}, !{cv["email"]}
+          li 
+            a(href=cv["personalSite"]) !{cv["personalSite"]}
           li !{cv["maritalStatus"]}
         img#photo(alt="Photo", src=cv['photo'])
       div#content
