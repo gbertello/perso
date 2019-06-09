@@ -14,8 +14,8 @@ services:
     restart: always
     environment:
       - ME_CONFIG_MONGODB_SERVER=mongo_test
-      - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER}
-      - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PASSWORD}
+      - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER_TEST}
+      - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PASSWORD_TEST}
     ports:
       - 9081:8081
     networks:
@@ -26,6 +26,8 @@ services:
     restart: always
     environment:
       - ENV=test
+      - USERNAME=${MONGO_EXPRESS_USER_TEST}
+      - PASSWORD=${MONGO_EXPRESS_PASSWORD_TEST}
     ports:
       - 81:80
     networks:

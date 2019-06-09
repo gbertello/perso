@@ -26,6 +26,8 @@ services:
     restart: always
     environment:
       - ENV=prod
+      - USERNAME=${MONGO_EXPRESS_USER}
+      - PASSWORD=${MONGO_EXPRESS_PASSWORD}
     ports:
       - 80:80
     networks:
