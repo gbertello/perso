@@ -1,5 +1,9 @@
 var express = require('express');
 var path = require('path');
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+
 var app = express();
 
 app.set('view engine', 'pug');
@@ -43,4 +47,20 @@ app.get('/', function(req, res){
   res.redirect('/CV');
 });
 
-app.listen(80);
+if (process.env.ENV == 'prod') {
+  var privateKey = fs.readFileSync('certs/privkey.pem', 'utf8');
+  var certificate = fs.readFileSync('certs/cert.pem', 'utf8');
+  var ca = fs.readFileSync('certs/chain.pem', 'utf8');
+
+  var credentials = {
+    key: privateKey,
+    cert: certificate,
+    ca: ca
+  };
+
+  var httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(443);
+} else {
+  var httpServer = http.createServer(app);
+  httpServer.listen(80);
+}

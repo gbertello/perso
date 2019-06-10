@@ -2,3 +2,4 @@
 mongo/mongo_data/
 mongo/data/prod
 node/app/public/img/prod
+certs/
