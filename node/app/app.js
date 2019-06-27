@@ -16,6 +16,10 @@ var users = [];
 users[process.env.USERNAME] = process.env.PASSWORD;
 var myAuth = basicAuth({challenge: true, users: users});
 
+app.get('/', function(req, res){
+  res.redirect('/CV');
+});
+
 app.get('/CV', function(req, res){
   var MongoClient = require('mongodb').MongoClient
   MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/cv', function(err, db) {
@@ -28,7 +32,7 @@ app.get('/CV', function(req, res){
   });
 });
 
-app.get('/CV/coverLetter', myAuth, function(req, res){
+app.get('/coverLetter', myAuth, function(req, res){
   var MongoClient = require('mongodb').MongoClient
   MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/cv', function(err, db) {
     if (err) throw err;
@@ -41,10 +45,6 @@ app.get('/CV/coverLetter', myAuth, function(req, res){
       });
     });
   });
-});
-
-app.get('/', function(req, res){
-  res.redirect('/CV');
 });
 
 if (process.env.ENV == 'prod') {
@@ -60,6 +60,12 @@ if (process.env.ENV == 'prod') {
 
   var httpsServer = https.createServer(credentials, app);
   httpsServer.listen(443);
+
+  var httpServer = express.createServer();
+  httpServer.get('*', function(req, res) {  
+      res.redirect('https://' + req.headers.host + req.url);
+  })
+  http.listen(80);
 } else {
   var httpServer = http.createServer(app);
   httpServer.listen(80);

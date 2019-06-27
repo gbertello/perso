@@ -3,7 +3,6 @@ services:
   mongo_test:
     container_name: perso_mongo_test
     build: mongo/
-    restart: always
     volumes:
       - ./mongo/mongo_data/test:/data/db
     networks:
@@ -11,7 +10,6 @@ services:
   mongo_express_test:
     container_name: perso_mongo_express_test
     build: mongo_express/
-    restart: always
     environment:
       - ME_CONFIG_MONGODB_SERVER=mongo_test
       - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER_TEST}
@@ -23,7 +21,6 @@ services:
   node_test:
     container_name: perso_node_test
     build: node/
-    restart: always
     environment:
       - ENV=test
       - USERNAME=${MONGO_EXPRESS_USER_TEST}

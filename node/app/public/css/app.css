@@ -1,0 +1,68 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.content {
+  padding: 20px 15px 30px 15px;
+  text-align: center;
+}
+
+/* Livres */
+.list-footer {
+  color: grey;
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+.solid {
+  border: 1px solid;
+}
+.text {
+  padding-top: 20px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.themes {
+  padding: 0 0 10px 0;
+}
+
+/* Jeux */
+.thumbnail {
+  margin-bottom: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+.thumbnail-spacer {
+  height: 100%;
+  width: 100%;
+  position:relative;
+}
+.thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.thumbnail-footer {
+  width: 200px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Below needed to have rows not printed in several pages */
+@media print  
+{
+    .row{
+        page-break-inside: avoid;
+    }
+    
+    .themes {
+  		display: none;
+	}
+}
