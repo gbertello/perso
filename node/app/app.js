@@ -61,7 +61,7 @@ if (process.env.ENV == 'prod') {
   var httpsServer = https.createServer(credentials, app);
   httpsServer.listen(443);
 
-  var httpServer = express.createServer();
+  var httpServer = http.createServer();
   httpServer.get('*', function(req, res) {  
       res.redirect('https://' + req.headers.host + req.url);
   })
