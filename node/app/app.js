@@ -32,7 +32,7 @@ app.get('/CV', function(req, res){
   });
 });
 
-app.get('/coverLetter', myAuth, function(req, res){
+app.get('/CoverLetter', myAuth, function(req, res){
   var MongoClient = require('mongodb').MongoClient
   MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/cv', function(err, db) {
     if (err) throw err;
@@ -43,6 +43,18 @@ app.get('/coverLetter', myAuth, function(req, res){
         db.close();
         res.render('cover_letter', {cv: result[0], cover_letter: result2[0]});  
       });
+    });
+  });
+});
+
+app.get('/Loisirs', function(req, res){
+  var MongoClient = require('mongodb').MongoClient
+  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/loisirs', function(err, db) {
+    if (err) throw err;
+    db.db("loisirs").collection("loisirs").find().toArray(function(err, result) {
+      if (err) throw err; 
+      db.close();
+      res.render('loisirs', {loisirs: result[0]});
     });
   });
 });

@@ -1,3 +1,11 @@
 {
-  "title": "My book - Famous Author"
+  "title": "My book - Famous Author",
+  "description": "Description of the book",
+  "rating": 4,
+  "tags": [
+    "Fun",
+    "Interesting"
+  ],
+  "date": "(date)",
+  "image": "/static/img/test/livre.jpeg"
 }
