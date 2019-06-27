@@ -1,21 +1,11 @@
+# Configuration needs to be defined in ~/.profile with the following variables:
+#   - PATH
+#   - MONGO_EXPRESS_USER_TEST
+#   - MONGO_EXPRESS_PASSWORD_TEST
+#
 if [ -f ~/.profile ]
 then
   source ~/.profile
-fi
-
-if [ -z "$MONGO_EXPRESS_USER_TEST" ] 
-then
-  echo -n User:
-  read MONGO_EXPRESS_USER_TEST
-  export MONGO_EXPRESS_USER_TEST=$MONGO_EXPRESS_USER_TEST
-fi
-
-if [ -z "$MONGO_EXPRESS_PASSWORD_TEST" ] 
-then
-  echo -n Password:
-  read -s MONGO_EXPRESS_PASSWORD_TEST
-  echo
-  export MONGO_EXPRESS_PASSWORD_TEST=$MONGO_EXPRESS_PASSWORD_TEST
 fi
 
 mkdir -p mongo/mongo_data/test
