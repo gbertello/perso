@@ -1,5 +1,4 @@
 # Configuration needs to be defined in ~/.profile with the following variables:
-#   - PATH
 #   - MONGO_EXPRESS_USER_TEST
 #   - MONGO_EXPRESS_PASSWORD_TEST
 #
