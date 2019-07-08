@@ -2,12 +2,11 @@
 #   - MONGO_EXPRESS_USER_TEST
 #   - MONGO_EXPRESS_PASSWORD_TEST
 #
-if [ -f ~/.profile ]
-then
-  source ~/.profile
-fi
+
+source ~/.profile
 
 mkdir -p mongo/mongo_data/test
+mkdir -p storage
 
 docker-compose -f docker-compose-test.yml down
 docker-compose -f docker-compose-test.yml build

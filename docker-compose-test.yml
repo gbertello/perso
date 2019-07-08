@@ -27,6 +27,8 @@ services:
       - PASSWORD=${MONGO_EXPRESS_PASSWORD_TEST}
     ports:
       - 81:80
+    volumes:
+      - "./storage:/app/storage"
     networks:
       - test
 networks:

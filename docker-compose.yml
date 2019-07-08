@@ -31,6 +31,8 @@ services:
     ports:
       - 443:443
       - 80:80
+    volumes:
+      - "./storage:/app/storage"
     networks:
       - prod
 networks:

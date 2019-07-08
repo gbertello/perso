@@ -9,7 +9,8 @@ var app = express();
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.use('/storage', express.static(path.join(__dirname, 'storage')));
 
 var basicAuth = require('express-basic-auth');
 var users = [];
