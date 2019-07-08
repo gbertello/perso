@@ -3,6 +3,8 @@ var path = require('path');
 var fs = require('fs');
 var http = require('http');
 var https = require('https');
+var MongoClient = require('mongodb').MongoClient;
+var mongoUrl = 'mongodb://mongo_' + process.env.ENV + ':27017/';
 
 var app = express();
 
@@ -22,26 +24,22 @@ app.get('/', function(req, res){
 });
 
 app.get('/CV', function(req, res){
-  var MongoClient = require('mongodb').MongoClient
-  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/', function(err, db) {
+  MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("cv").find().toArray(function(err, result) {
       if (err) throw err; 
-      db.close();
       res.render('cv', {cv: result[0]});
     });
   });
 });
 
 app.get('/CoverLetter', myAuth, function(req, res){
-  var MongoClient = require('mongodb').MongoClient
-  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/', function(err, db) {
+  MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("cv").find().toArray(function(err, result) {
       if (err) throw err;
       db.db("perso").collection("cover_letter").find().toArray(function(err, result2) {
         if (err) throw err;
-        db.close();
         res.render('cover_letter', {cv: result[0], cover_letter: result2[0]});  
       });
     });
@@ -49,12 +47,10 @@ app.get('/CoverLetter', myAuth, function(req, res){
 });
 
 app.get('/Loisirs', function(req, res){
-  var MongoClient = require('mongodb').MongoClient
-  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/', function(err, db) {
+  MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("loisirs").find().toArray(function(err, result) {
       if (err) throw err; 
-      db.close();
       res.render('loisirs', {loisirs: result});
     });
   });
