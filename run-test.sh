@@ -7,7 +7,6 @@ source ~/.profile
 
 rm -rf mongo/mongo_data/test
 mkdir -p mongo/mongo_data/test
-mkdir -p storage
 
 docker-compose -f docker-compose-test.yml down
 docker-compose -f docker-compose-test.yml build
