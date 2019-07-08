@@ -5,11 +5,11 @@
   "email": "My e-mail",
   "personalSite": "http://www.mysite.fr",
   "maritalStatus": "My marital status",
-  "photo": "/public/img/test/photo.jpg",
+  "photo": "/public/img/photo.jpg",
   "motivation": "My motivation",
   "employmentItems": [
     {
-      "image": "/public/img/test/company.png",
+      "image": "/public/img/company.png",
       "date": "(date)",
       "location": "Location",
       "title": "Job title",
@@ -21,7 +21,7 @@
   ],
   "hiddenEmploymentItems": [
     {
-      "image": "/public/img/test/company.png",
+      "image": "/public/img/company.png",
       "date": "(date)",
       "location": "Location",
       "title": "Job title",
@@ -33,7 +33,7 @@
   ],
   "educationItems": [
     {
-      "image": "/public/img/test/company.png",
+      "image": "/public/img/company.png",
       "date": "(date)",
       "location": "Location",
       "title": "Job title",
@@ -45,7 +45,7 @@
   ],
   "hiddenEducationItems": [
     {
-      "image": "/public/img/test/company.png",
+      "image": "/public/img/company.png",
       "date": "(date)",
       "location": "Location",
       "title": "Job title",

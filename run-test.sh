@@ -5,6 +5,7 @@
 
 source ~/.profile
 
+rm -rf mongo/mongo_data/test
 mkdir -p mongo/mongo_data/test
 mkdir -p storage
 
