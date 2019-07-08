@@ -55,7 +55,7 @@ app.get('/Loisirs', function(req, res){
     db.db("loisirs").collection("loisirs").find().toArray(function(err, result) {
       if (err) throw err; 
       db.close();
-      res.render('loisirs', {loisirs: result[0]});
+      res.render('loisirs', {loisirs: result});
     });
   });
 });
