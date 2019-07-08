@@ -23,9 +23,9 @@ app.get('/', function(req, res){
 
 app.get('/CV', function(req, res){
   var MongoClient = require('mongodb').MongoClient
-  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/cv', function(err, db) {
+  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/', function(err, db) {
     if (err) throw err;
-    db.db("cv").collection("cv").find().toArray(function(err, result) {
+    db.db("perso").collection("cv").find().toArray(function(err, result) {
       if (err) throw err; 
       db.close();
       res.render('cv', {cv: result[0]});
@@ -35,11 +35,11 @@ app.get('/CV', function(req, res){
 
 app.get('/CoverLetter', myAuth, function(req, res){
   var MongoClient = require('mongodb').MongoClient
-  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/cv', function(err, db) {
+  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/', function(err, db) {
     if (err) throw err;
-    db.db("cv").collection("cv").find().toArray(function(err, result) {
+    db.db("perso").collection("cv").find().toArray(function(err, result) {
       if (err) throw err;
-      db.db("cv").collection("cover_letter").find().toArray(function(err, result2) {
+      db.db("perso").collection("cover_letter").find().toArray(function(err, result2) {
         if (err) throw err;
         db.close();
         res.render('cover_letter', {cv: result[0], cover_letter: result2[0]});  
@@ -50,9 +50,9 @@ app.get('/CoverLetter', myAuth, function(req, res){
 
 app.get('/Loisirs', function(req, res){
   var MongoClient = require('mongodb').MongoClient
-  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/loisirs', function(err, db) {
+  MongoClient.connect('mongodb://mongo_' + process.env.ENV + ':27017/', function(err, db) {
     if (err) throw err;
-    db.db("loisirs").collection("loisirs").find().toArray(function(err, result) {
+    db.db("perso").collection("loisirs").find().toArray(function(err, result) {
       if (err) throw err; 
       db.close();
       res.render('loisirs', {loisirs: result});

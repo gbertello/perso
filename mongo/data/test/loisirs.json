@@ -9,3 +9,13 @@
   "date": "(date)",
   "image": "/public/img/livre.jpeg"
 }
+{
+  "title": "My 2nd book - Another Famous Author",
+  "description": "Description of the book",
+  "rating": 4,
+  "tags": [
+    "Serious"
+  ],
+  "date": "(date)",
+  "image": "/public/img/livre.jpeg"
+}
