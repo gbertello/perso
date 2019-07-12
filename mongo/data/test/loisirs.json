@@ -1,6 +1,6 @@
 { 
-  "_id": "5d238f2ce5145427e0f67b2e",
-  "title": "My book - Famous Author",
+  "title": "My book",
+  "author": "Famous Author",
   "description": "Description of the book",
   "rating": 4,
   "tags": [
@@ -8,16 +8,16 @@
     "Interesting"
   ],
   "date": "(date)",
-  "image": "/public/img/livre.jpeg"
+  "logo": "/public/img/livre.jpeg"
 }
 {
-  "_id": "5d238f2ce5145427e0f67b2f",
-  "title": "My 2nd book - Another Famous Author",
+  "title": "My 2nd book",
+  "author": "Another Famous Author",
   "description": "Description of the book",
   "rating": 4,
   "tags": [
     "Serious"
   ],
   "date": "(date)",
-  "image": "/public/img/livre.jpeg"
+  "logo": "/public/img/livre.jpeg"
 }
