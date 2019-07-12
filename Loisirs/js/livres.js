@@ -4,7 +4,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	this.books = [{
 		title: "Le charme discret de l'intestin",
 		author: "Giulia Enders",
-		logo: "img/livres/intestin.jpg",
+		logo: "/storage/loisirs/intestin.jpg",
 		description: "Un sujet peu commode mais très abordable pour les néophytes en biologie. L'auteur nous transporte vers \
 		l'univers de l'infiniment petit en décrivant précisément comment chacun de nous peut héberger tout un écosystème de bactéries \
 		dans notre appareil digestif. Surtout, il met en avant un domaine majeur que la science est en train de commencer à explorer: \
@@ -16,7 +16,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Continuous Delivery",
 		author: "Jez Humble",
-		logo: "img/livres/continuousdelivery.jpg",
+		logo: "/storage/loisirs/continuousdelivery.jpg",
 		description: "Pour les experts et passionnés en informatique. Un livre qui donne toutes les recettes pour mieux optimiser \
 		la chaîne de production logicielle tout en se préoccupant de toujours garder un certain niveau de qualité et satisfaire au mieux les clients. \
 		De nombreux concepts sont décrits en détail comme l'intégration continue, la mécanique de déploiement automatique et l'automatisation des tests unitaires et d'acceptance. \
@@ -28,7 +28,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "L'extraordinaire voyage du fakir... ",
 		author: "Romain Puértolas",
-		logo: "img/livres/fakir.jpg",
+		logo: "/storage/loisirs/fakir.jpg",
 		description: "Un extraordinaire voyage raconté par un extraordinaire auteur. Un livre plein de péripéties aussi folles les unes que les autres \
 		qui se permet en même temps d'illustrer quelques faits marquants de notre société.",
 		date: "Août 2015",
@@ -38,7 +38,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "How Google test software",
 		author: "James Whittaker",
-		logo: "img/livres/googletest.jpg",
+		logo: "/storage/loisirs/googletest.jpg",
 		description: "Qui n'a jamais rêvé de comprendre comment Google testait leur systèmes ? Du moteur de recherche standard aux applications \
 		mondialement connues comme gmail, Chrome ou Android, ce livre nous dévoile comment sont testés et vérifiés les logiciels avant de les diffuser au grand public. \
 		Comme toujours quand il s'agit de Google, les méthodes et les outils sont utiles, performants et intelligemment conçus.",
@@ -49,7 +49,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Les 12 travaux de l'opposition",
 		author: "UMP",
-		logo: "img/livres/les12travauxdelopposition.jpg",
+		logo: "/storage/loisirs/les12travauxdelopposition.jpg",
 		description: "L'UMP est en train de mourir. Mais elle explique à travers cet ouvrage ce qu'elle compte faire pour survivre. De bonnes idées sont \
 		évoquées notamment la refonte de notre démocratie (par Bruno Le Maire) et les innovations mélangeant écologie et numérique (par Nathalie Kosciusko-Morizet). \
 		On pourrait regretter que les intervenants ne se soient pas plus concertés avant la publication de cet ouvrage, on a quelque fois l'impression que \
@@ -61,7 +61,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Merci pour ce moment",
 		author: "Valérie Trierweiler",
-		logo: "img/livres/mercipourcemoment.jpg",
+		logo: "/storage/loisirs/mercipourcemoment.jpg",
 		description: "Il est peu commun de lire le récit d'une personnalité au plus proche du sommet de l'état.\
 		Malgré quelques bonnes anecdotes sur les principaux événements qui ont marqué le début de mandat de François Hollande (l'affaire Cahuzac, \
 		Léonarda, le tweet des élections législatives, ...), cette auto-biographie est avant tout un roman d'amour et d'eau fraîche où l'ex-Première Dame justifie\
@@ -73,7 +73,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Combien ?",
 		author: "Douglas Kennedy",
-		logo: "img/livres/combien.jpg",
+		logo: "/storage/loisirs/combien.jpg",
 		description: "Un récit sur les places boursières du monde et quelques uns de leurs acteurs piochés au hasard. L'auteur nous fait réfléchir tout au long du \
 		    livre sur la véritable place de l'argent dans la société. Comment se fait-il qu'il y ait tant d'inégalités entre les plus pauvres et les plus riches?\
 		    Est-ce que les traders sont effectivement plus heureux? En passant par Casablanca, Sydney,\
@@ -86,7 +86,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "L'homme libre",
 		author: "Jean-Jacques Bourdin",
-		logo: "img/livres/lhommelibre.jpg",
+		logo: "/storage/loisirs/lhommelibre.jpg",
 		description: "L'homme que j'écoute tous les matins à la radio se livre a un essai pour se décrire et se défendre des critiques de ses détracteurs. \
    		    Selon lui, un journaliste se doit de rester neutre pour essayer de trouver des réponses concrètes aux questions soulevées par le peuple. Et c'est cette liberté \
             qui lui a permis de réussir ses plus grandes interviews avec par exemple Ségolène Royale qui ne dénombraient qu'un sous-marin nucléaire en France, Nicolas \
@@ -99,7 +99,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
     {
 		title: "Le dernier théorème de Fermat",
 		author: "Simon Singh",
-		logo: "img/livres/fermatslasttheorem.jpg",
+		logo: "/storage/loisirs/fermatslasttheorem.jpg",
 		description: "Le théorème de Fermat est l'un des théorèmes les plus incroyables des mathématiques. \
 			Il a été publié par Pierre de Fermat au cours du XVIIe siècle sans preuve associée et a finalement été démontré par Andrew Wiles \
 			en 1994 en utilisant les techniques mathématiques les plus poussées du XXe siècle. Le plus ahurissant est que Pierre \
@@ -112,7 +112,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Confessions d'un compositeur",
 		author: "John Cage",
-		logo: "img/livres/confessionscompositeur.jpg",
+		logo: "/storage/loisirs/confessionscompositeur.jpg",
 		description: "Pour des musiciens experts seulement. Un compositeur moderne du XXe siecle explique son chemin parcouru \
 			avec la musique. Briser les idées préconçues que lui ont inculquées les professeurs de musique classique traditionnelle \
 			a été son plus grand défi, d'où son attrait vers les musiques de percussions. \
@@ -125,7 +125,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Histoire des Codes Secrets",
 		author: "Simon Singh",
-		logo: "img/livres/codes.jpg",
+		logo: "/storage/loisirs/codes.jpg",
 		description: "Un livre fabuleux qui retranscrit comment \
 			depuis l'Antiquité les diverses générations ont réussi à coder leurs messages \
 			pour certains et à les décoder pour d'autres. Nous y apprenons par exemple \
@@ -139,7 +139,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Pour une économie positive !",
 		author: "Jacques Attali",
-		logo: "img/livres/economiepositive.jpg",
+		logo: "/storage/loisirs/economiepositive.jpg",
 		description: "Enfin un livre sérieux qui donne espoir. Tout le livre \
 		illustre les dérives de la finance actuelle et du \"business\" uniquement porté sur l'optimisation \
             de la rentabilité à court terme. Il donne aussi quelques pistes sérieuses sur les principales \
@@ -152,7 +152,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Le meilleur médicament, c'est vous !",
 		author: "Frédéric Saldmann",
-		logo: "img/livres/medicament.jpg",
+		logo: "/storage/loisirs/medicament.jpg",
 		description: "Un nutritionniste explique comment l'auto-médication \
             peut parfois être bien plus utile que des scéances chez le docteur à répétition. \
             Il nous fait part d'une flopée de trucs et astuces qui peuvent simplifier notre quotidien: \
@@ -164,7 +164,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Le Mystère Français",
 		author: "Hervé Le Bras, Emmanuel Todd",
-		logo: "img/livres/lemysterefrancais.jpg",
+		logo: "/storage/loisirs/lemysterefrancais.jpg",
 		description: "Ces démographes nous dressent un portrait étonnant de la \
 			France avec un jeu de cartes atypiques. Différents critères sont mis en évidence (vieillissement \
             de la population, religion, exode, ...). A lire la tête reposée quand même.",
@@ -175,7 +175,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Comment s'en sortir !",
 		author: "Jean-François Kahn",
-		logo: "img/livres/commentsensortir.jpg",
+		logo: "/storage/loisirs/commentsensortir.jpg",
 		description: "Un titre alléchant. Un point de vue aux antipodes du mien. \
             Quelques bonnes pensées. Il met par exemple en évidence que la bi-polarité est à l'origine \
             du malaise politique qui existe dans notre pays.",
@@ -186,7 +186,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Urgences Françaises !",
 		author: "Jacques Attali",
-		logo: "img/livres/urgencesfrancaises.jpg",
+		logo: "/storage/loisirs/urgencesfrancaises.jpg",
 		description: "Que faire dans notre pays pour le remettre en marche ? \
             C'est la question à laquelle tente de répondre Jacques Attali. Il nous propose \
             une liste de réformes diverses et variées, pour la plupart impopulaires, mais qui \
@@ -199,7 +199,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Le Coup Monté !",
 		author: "Carole Barjon, Bruno Jeudy",
-		logo: "img/livres/coupmonte.jpg",
+		logo: "/storage/loisirs/coupmonte.jpg",
 		description: "La crise de l'UMP Copé-Fillon de l'automne 2012 n'était pas brillante. \
             Et pourtant le commun des mortels ne voyait que la surface de l'Iceberg. Tricheries, \
             coups bas, calculs, voilà ce qui importe pour les personnes qui se disent un jour prétendre à \
@@ -213,7 +213,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Qui va payer la crise ?",
 		author: "François Langlet",
-		logo: "img/livres/quivapayerlacrise.jpg",
+		logo: "/storage/loisirs/quivapayerlacrise.jpg",
 		description: "La crise touche tout le monde... ou presque. Certains \
             rentiers n'en voient même pas la couleur. D'autres, à l'origine du désastre, ne se \
             soucient pas des conséquences de leurs actes. Mais qui reste-t-il donc ? Selon \
@@ -225,7 +225,7 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 	{
 		title: "Les 7 lois pour guider vos enfants vers la voie du succès",
 		author: "Deepak Choppa",
-		logo: "img/livres/lesseptlois.jpg",
+		logo: "/storage/loisirs/lesseptlois.jpg",
 		description: "Il est rêve de tout parent de vouloir la réussite de ses enfants. \
             Pourtant ce n'est pas chose facile étant donné qu'ils pensent différemment, avec leur innocence \
             liée à leur immaturité. Ce livre présente 7 lois (tout est possible, ce que tu cherches à obtenir donne-le, formalise tes désirs, ...) \
@@ -234,30 +234,8 @@ app.controller('livresController', ['$scope', '$sce', function($scope, $sce) {
 		tags: ["Education"],
 		rating: 5
 	},
-	{
-		title: "Papa, maman, écoutez-moi vraiment.",
-		author: "Jacques Salomé",
-		logo: "img/livres/papamaman.jpg",
-		description: "Spécialiste de l'éducation des enfants, Jacques Salomé nous ouvre un différent point \
-		de vue sur l'éducation des enfants. Il se focalise sur la compréhension de ce que les enfants essaient d'exprimer. L'idée directrice du \
-		livre est que chaque comportement (sourire, caprice, pipi au lit, ...) est un langage. A méditer !",
-		date: "Octobre 2012",
-		tags: ["Education"],
-		rating: 3
-	},
-	{
-		title: "Steve Jobs",
-		author: "Walter Isaacson",
-		logo: "img/livres/stevejobs.jpg",
-		description: "Certains l'adorent, d'autres le détestent. Indépendamment de ces sentiments irrationnels, \
-            cet homme a changé le monde grâce à son existence. Il est à l'origine de toute invention \
-            technologique majeure depuis les années 1980 (ordinateur de bureau, ordinateur portable, \
-            lecteur de musique, téléphone, tablette, ...). La liste ne se serait pas arrêtée là si il \
-            n'avait pas quitté ce monde si tôt.",
-		date: "Août 2012",
-		tags: ["Informatique"],
-		rating: 5
-	}];
+	,
+	];
 	
 	this.tags = {};
 	for (var i in this.books) {
