@@ -28,9 +28,6 @@ services:
       - ENV=prod
       - USERNAME=${MONGO_EXPRESS_USER}
       - PASSWORD=${MONGO_EXPRESS_PASSWORD}
-    ports:
-      - 443:443
-      - 80:80
     volumes:
       - "./storage:/app/storage"
     networks:

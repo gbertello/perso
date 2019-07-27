@@ -8,7 +8,7 @@
     "Interesting"
   ],
   "date": "(date)",
-  "logo": "/public/img/livre.jpeg"
+  "logo": "public/img/livre.jpeg"
 }
 {
   "title": "My 2nd book",
@@ -19,5 +19,5 @@
     "Serious"
   ],
   "date": "(date)",
-  "logo": "/public/img/livre.jpeg"
+  "logo": "public/img/livre.jpeg"
 }
