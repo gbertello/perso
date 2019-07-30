@@ -9,7 +9,7 @@ services:
     networks:
       - prod
   mongo_express_prod:
-    container_name: perso_express_prod
+    container_name: perso_mongo_express_prod
     build: mongo_express/
     restart: always
     environment:
