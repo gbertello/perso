@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   mongo_prod:
     container_name: perso_mongo_prod
@@ -16,8 +16,6 @@ services:
       - ME_CONFIG_MONGODB_SERVER=mongo_prod
       - ME_CONFIG_BASICAUTH_USERNAME=${MONGO_EXPRESS_USER}
       - ME_CONFIG_BASICAUTH_PASSWORD=${MONGO_EXPRESS_PASSWORD}
-    ports:
-      - 9080:8081
     networks:
       - prod
   node_prod:
@@ -30,11 +28,9 @@ services:
       - PASSWORD=${MONGO_EXPRESS_PASSWORD}
     volumes:
       - "./storage:/app/storage"
-    ports:
-      - 80:80
-      - 443:443
     networks:
       - prod
 networks:
   prod:
-    driver: bridge
+    external:
+      name: prod

@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 services:
   mongo_test:
     container_name: perso_mongo_test
@@ -33,4 +33,5 @@ services:
       - test
 networks:
   test:
-    driver: bridge
+    external:
+      name: test
