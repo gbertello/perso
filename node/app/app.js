@@ -14,7 +14,9 @@ app.use('/perso/storage', express.static(path.join(__dirname, 'storage')));
 var basicAuth = require('express-basic-auth');
 var users = [];
 users[process.env.USERNAME] = process.env.PASSWORD;
-var myAuth = basicAuth({challenge: true, users: users});
+
+if (process.env["ENV"] == 'prod')
+  app.use('/perso/Lettre', basicAuth({challenge: true, users: users}));
 
 app.get('/perso', function(req, res){
   res.redirect('/perso/livres');
@@ -30,7 +32,7 @@ app.get('/perso/CV', function(req, res){
   });
 });
 
-app.get('/perso/Lettre', myAuth, function(req, res){
+app.get('/perso/Lettre', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
