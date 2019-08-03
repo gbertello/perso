@@ -30,6 +30,11 @@ body {
   width: 125px;
 }
 
+.intro {
+  margin-bottom: 30px;
+  font-family: Apple Chancery, cursive;
+}
+
 /* Below needed to have rows not printed in several pages */
 @media print  
 {

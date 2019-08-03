@@ -3,11 +3,12 @@ html(lang="en")
   head
     meta(charset="utf-8")
     meta(name="viewport", content="width=device-width, initial-scale=1")
-    title Mes Loisirs
+    title Mes Livres
     link(rel="stylesheet", href="public/css/bootstrap.min.css", type="text/css")
     link(rel="stylesheet", href="public/css/app.css", type="text/css")
   body
     div.container
+      p.intro !{perso["books"]["intro"]}
       each book in books.reverse()
         div.list-group
           a.list-group-item.row

@@ -1,9 +1,9 @@
 div#top
-  h1 !{cv["name"]}
+  h1 !{perso["cv"]["name"]}
   ul#contact
-    li !{cv["address"]}
-    li Tel: !{cv["telephone"]}, !{cv["email"]}
+    li !{perso["cv"]["address"]}
+    li Tel: !{perso["cv"]["telephone"]}, !{perso["cv"]["email"]}
     li 
-      a(href=cv["personalSite"]) !{cv["personalSite"]}
-    li !{cv["maritalStatus"]}
-  img#photo(alt="Photo", src=cv['photo'])
+      a(href=perso["cv"]["personalSite"]) !{perso["cv"]["personalSite"]}
+    li !{perso["cv"]["maritalStatus"]}
+  img#photo(alt="Photo", src=perso["cv"]['photo'])

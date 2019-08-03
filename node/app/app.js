@@ -17,28 +17,25 @@ users[process.env.USERNAME] = process.env.PASSWORD;
 var myAuth = basicAuth({challenge: true, users: users});
 
 app.get('/perso', function(req, res){
-  res.redirect('/perso/CV');
+  res.redirect('/perso/livres');
 });
 
 app.get('/perso/CV', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
-    db.db("perso").collection("cv").find().toArray(function(err, result) {
+    db.db("perso").collection("perso").find().toArray(function(err, result) {
       if (err) throw err; 
-      res.render('cv', {cv: result[0]});
+      res.render('cv', {perso: result[0]});
     });
   });
 });
 
-app.get('/perso/CoverLetter', myAuth, function(req, res){
+app.get('/perso/Lettre', myAuth, function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
-    db.db("perso").collection("cv").find().toArray(function(err, result) {
+    db.db("perso").collection("perso").find().toArray(function(err, result) {
       if (err) throw err;
-      db.db("perso").collection("cover_letter").find().toArray(function(err, result2) {
-        if (err) throw err;
-        res.render('cover_letter', {cv: result[0], cover_letter: result2[0]});  
-      });
+      res.render('cover_letter', {perso: result[0]});
     });
   });
 });
@@ -46,9 +43,12 @@ app.get('/perso/CoverLetter', myAuth, function(req, res){
 app.get('/perso/Livres', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
-    db.db("perso").collection("books").find().toArray(function(err, result) {
-      if (err) throw err; 
-      res.render('books', {books: result});
+    db.db("perso").collection("perso").find().toArray(function(err, result_perso) {
+      if (err) throw err;  
+      db.db("perso").collection("books").find().toArray(function(err, result_books) {
+        if (err) throw err; 
+        res.render('books', {perso: result_perso[0], books: result_books});
+      });
     });
   });
 });
