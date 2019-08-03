@@ -1,7 +1,7 @@
 var express = require('express');
 var path = require('path');
 var MongoClient = require('mongodb').MongoClient;
-var mongoUrl = 'mongodb://mongo_' + process.env.ENV + ':27017/';
+var basicAuth = require('express-basic-auth');
 
 var app = express();
 
@@ -11,18 +11,19 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/perso/public', express.static(path.join(__dirname, 'public')));
 app.use('/perso/storage', express.static(path.join(__dirname, 'storage')));
 
-var basicAuth = require('express-basic-auth');
-var users = [];
-users[process.env.USERNAME] = process.env.PASSWORD;
+if (process.env.ENV == 'prod') {
+  var users = [];
+  users[process.env.USERNAME] = process.env.PASSWORD;
+  app.use('/perso/lettre', basicAuth({challenge: true, users: users}));
+}
 
-if (process.env.ENV == 'prod')
-  app.use('/perso/Lettre', basicAuth({challenge: true, users: users}));
-
+var mongoUrl = 'mongodb://mongo_' + process.env.ENV + ':27017/';
+  
 app.get('/perso', function(req, res){
   res.redirect('/perso/livres');
 });
 
-app.get('/perso/CV', function(req, res){
+app.get('/perso/cv', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
@@ -32,7 +33,7 @@ app.get('/perso/CV', function(req, res){
   });
 });
 
-app.get('/perso/Lettre', function(req, res){
+app.get('/perso/lettre', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
@@ -42,7 +43,7 @@ app.get('/perso/Lettre', function(req, res){
   });
 });
 
-app.get('/perso/Livres', function(req, res){
+app.get('/perso/livres', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result_perso) {
