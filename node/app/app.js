@@ -15,7 +15,7 @@ var basicAuth = require('express-basic-auth');
 var users = [];
 users[process.env.USERNAME] = process.env.PASSWORD;
 
-if (process.env.ENV] == 'prod')
+if (process.env.ENV == 'prod')
   app.use('/perso/Lettre', basicAuth({challenge: true, users: users}));
 
 app.get('/perso', function(req, res){
