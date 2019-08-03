@@ -43,12 +43,12 @@ app.get('/perso/CoverLetter', myAuth, function(req, res){
   });
 });
 
-app.get('/perso/Loisirs', function(req, res){
+app.get('/perso/Livres', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
-    db.db("perso").collection("loisirs").find().toArray(function(err, result) {
+    db.db("perso").collection("books").find().toArray(function(err, result) {
       if (err) throw err; 
-      res.render('loisirs', {loisirs: result});
+      res.render('books', {books: result});
     });
   });
 });
