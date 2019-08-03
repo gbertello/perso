@@ -1,3 +1,5 @@
+#!/bin/bash -ex
+
 BASEDIR=$(dirname "$0")
 
 docker cp "$BASEDIR/data/test/perso.json" perso_mongo_test:/tmp/perso.json 

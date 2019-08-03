@@ -1,6 +1,5 @@
-# Configuration needs to be defined in ~/.profile with the following variables:
-#   - MONGO_EXPRESS_USER_TEST
-#   - MONGO_EXPRESS_PASSWORD_TEST
+#!/bin/bash -ex
+#
 #
 
 source ~/.profile
