@@ -4,4 +4,4 @@ mongo/data/prod
 node/app/public/img/prod
 certs/
 storage/
-deploy2.sh
+deploy.sh
