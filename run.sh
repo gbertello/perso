@@ -9,6 +9,7 @@ source ~/.profile
 mkdir -p mongo/mongo_data/prod
 mkdir -p storage
 
+docker network create --driver bridge prod &> /dev/null
 docker-compose down
 docker-compose build
 docker-compose up -d
