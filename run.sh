@@ -6,7 +6,7 @@
 
 source ~/.profile
 
-mkdir -p mongo/mongo_data/prod
+mkdir -p mongo/db/prod
 mkdir -p storage
 
 docker network create --driver bridge prod &> /dev/null

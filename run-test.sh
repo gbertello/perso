@@ -4,8 +4,8 @@
 
 source ~/.profile
 
-rm -rf mongo/mongo_data/test
-mkdir -p mongo/mongo_data/test
+rm -rf mongo/db/test
+mkdir -p mongo/db/test
 
 docker network create --driver bridge test &> /dev/null || true
 docker-compose -f docker-compose-test.yml down

@@ -4,7 +4,7 @@ services:
     container_name: perso_mongo_test
     build: mongo/
     volumes:
-      - ./mongo/mongo_data/test:/data/db
+      - ./mongo/db/test:/data/db
     networks:
       - test
   mongo_express_test:

@@ -5,7 +5,7 @@ services:
     build: mongo/
     restart: always
     volumes:
-      - ./mongo/mongo_data/prod:/data/db
+      - ./mongo/db/prod:/data/db
     networks:
       - prod
   mongo_express_prod:

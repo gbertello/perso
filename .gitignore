@@ -1,5 +1,5 @@
 *.DS_Store
-mongo/mongo_data/
+mongo/db/
 node/app/public/img/prod
 certs/
 storage/
