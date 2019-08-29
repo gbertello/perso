@@ -1,7 +1,8 @@
-#!/bin/bash -ex
+#!/bin/bash -e
 #
 # Configuration needs to be defined in ~/.profile with the following variables:
-#   - MONGO_EXPRESS_USER
+#   - USER
+#   - PASSWORD
 #
 
 source ~/.profile
