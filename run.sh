@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/bash -ex
 #
 # Configuration needs to be defined in ~/.profile with the following variables:
 #   - USER
