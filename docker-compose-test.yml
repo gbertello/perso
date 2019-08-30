@@ -11,7 +11,7 @@ services:
     container_name: perso_mongo_express_test
     build: mongo_express/
     environment:
-      - ME_CONFIG_MONGODB_SERVER=mongo_test
+      - ME_CONFIG_MONGODB_SERVER=perso_mongo_test
     ports:
       - 9081:8081
     networks:
