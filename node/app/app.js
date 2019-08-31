@@ -14,16 +14,20 @@ app.use('/perso/storage', express.static(path.join(__dirname, 'storage')));
 if (process.env.ENV == 'prod') {
   var users = [];
   users[process.env.USERNAME] = process.env.PASSWORD;
-  app.use('/perso/lettre', basicAuth({challenge: true, users: users}));
+  app.use('/cv/lettre', basicAuth({challenge: true, users: users}));
 }
 
 var mongoUrl = 'mongodb://perso_mongo_' + process.env.ENV + ':27017/';
   
-app.get('/perso', function(req, res){
-  res.redirect('/perso/livres');
+app.get('/', function(req, res){
+  res.redirect('/livres');
 });
 
-app.get('/perso/cv', function(req, res){
+app.get('/perso', function(req, res){
+  res.redirect('/livres');
+});
+
+app.get('/cv', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
@@ -33,7 +37,7 @@ app.get('/perso/cv', function(req, res){
   });
 });
 
-app.get('/perso/lettre', function(req, res){
+app.get('/cv/lettre', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
@@ -43,7 +47,7 @@ app.get('/perso/lettre', function(req, res){
   });
 });
 
-app.get('/perso/livres', function(req, res){
+app.get('/livres', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result_perso) {
