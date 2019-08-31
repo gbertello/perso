@@ -60,4 +60,14 @@ app.get('/livres', function(req, res){
   });
 });
 
+app.get('/piano', function(req, res){
+  MongoClient.connect(mongoUrl, function(err, db) {
+    if (err) throw err;
+    db.db("perso").collection("perso").find().toArray(function(err, result_perso) {
+      if (err) throw err;
+      res.render('piano', {perso: result_perso[0]});
+    });
+  });
+});
+
 app.listen(80);
