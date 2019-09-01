@@ -8,5 +8,16 @@ html(lang="en")
     link(rel="stylesheet", href="/perso/public/css/app.css", type="text/css")
   body
     div.container
+      img#piano-logo(src=perso["piano"]["logo"], alt='logo')
       p.intro !{perso["piano"]["intro"]}
+      h3 Démos
+      each demo in perso["piano"]["demos"]
+        div
+          a(href=demo["link"]) !{demo["name"]}
+      h3 Répertoire
+      each tunes, style in perso["piano"]["repertoire"]
+        h5 !{style}
+        ul
+          each tune in tunes
+            li !{tune}
 

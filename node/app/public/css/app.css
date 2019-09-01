@@ -35,6 +35,16 @@ body {
   font-family: Apple Chancery, cursive;
 }
 
+#piano-logo {
+  display: block;
+  margin: 0 auto 20px auto;
+  height: 300px;
+  border:1px solid #AAAAAA;
+  -moz-border-radius:30px;
+  -webkit-border-radius:30px;
+  border-radius:30px;
+}
+
 /* Below needed to have rows not printed in several pages */
 @media print  
 {
