@@ -32,17 +32,18 @@ body {
 
 .intro {
   margin-bottom: 30px;
-  font-family: Apple Chancery, cursive;
+  font-style: italic;
 }
 
 #piano-logo {
   display: block;
   margin: 0 auto 20px auto;
-  height: 300px;
+  height: auto;
   border:1px solid #AAAAAA;
   -moz-border-radius:30px;
   -webkit-border-radius:30px;
   border-radius:30px;
+  max-width: 99%;
 }
 
 /* Below needed to have rows not printed in several pages */
