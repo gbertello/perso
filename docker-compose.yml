@@ -1,24 +1,5 @@
 version: '3.5'
 services:
-  mongo_prod:
-    container_name: perso_mongo_prod
-    build: mongo/
-    restart: always
-    volumes:
-      - ./mongo/db/prod:/data/db
-    networks:
-      - prod
-  mongo_express_prod:
-    container_name: perso_mongo_express_prod
-    build: mongo_express/
-    restart: always
-    environment:
-      - ME_CONFIG_MONGODB_SERVER=perso_mongo_prod
-      - ME_CONFIG_BASICAUTH_USERNAME=${USER}
-      - ME_CONFIG_BASICAUTH_PASSWORD=${PASSWORD}
-      - ME_CONFIG_SITE_BASEURL=/perso/admin
-    networks:
-      - prod
   node_prod:
     container_name: perso_node_prod
     build: node/
@@ -27,8 +8,7 @@ services:
       - ENV=prod
       - USERNAME=${USER}
       - PASSWORD=${PASSWORD}
-    volumes:
-      - "./storage:/app/storage"
+      - MONGO_URI=mongodb+srv://${USER}:${PASSWORD}@${MONGO_URI}
     networks:
       - prod
 networks:

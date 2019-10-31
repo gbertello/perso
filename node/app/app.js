@@ -17,7 +17,7 @@ if (process.env.ENV == 'prod') {
   app.use('/cv/lettre', basicAuth({challenge: true, users: users}));
 }
 
-var mongoUrl = 'mongodb://perso_mongo_' + process.env.ENV + ':27017/';
+var mongoUrl = process.env.MONGO_URI;
   
 app.get('/', function(req, res){
   res.redirect('/livres');
