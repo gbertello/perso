@@ -20,4 +20,3 @@ do
   sleep 5
 done
 
-docker-compose up -d mongo_express_prod

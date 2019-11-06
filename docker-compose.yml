@@ -8,7 +8,7 @@ services:
       - ENV=prod
       - USERNAME=${USER}
       - PASSWORD=${PASSWORD}
-      - MONGO_URI=mongodb+srv://${USER}:${PASSWORD}@${MONGO_URI}
+      - MONGO_URI=mongodb://mongo_prod
     networks:
       - prod
 networks:
