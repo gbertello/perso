@@ -21,7 +21,7 @@ services:
       - MONGO_URI=mongodb://perso_mongo_prod
     networks:
       - prod
-  networks:
+networks:
   prod:
     external:
       name: prod
