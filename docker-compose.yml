@@ -18,6 +18,8 @@ services:
       - "./storage/node/prod:/app/storage"
     environment:
       - ENV=prod
+      - USER=${USER}
+      - PASSWORD=${PASSWORD}
       - MONGO_URI=mongodb://perso_mongo_prod
     networks:
       - prod
