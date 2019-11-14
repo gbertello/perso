@@ -13,7 +13,7 @@ app.use('/perso/storage', express.static(path.join(__dirname, 'storage')));
 
 if (process.env.ENV == 'prod') {
   var users = [];
-  users[process.env.USERNAME] = process.env.PASSWORD;
+  users[process.env.USER] = process.env.PASSWORD;
   app.use('/cv/lettre', basicAuth({challenge: true, users: users}));
 }
 
