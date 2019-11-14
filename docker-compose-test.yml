@@ -4,16 +4,9 @@ services:
     container_name: perso_mongo_test
     build: mongo/
     volumes:
-      - ./mongo/db/test:/data/db
-    networks:
-      - test
-  mongo_express_test:
-    container_name: perso_mongo_express_test
-    build: mongo_express/
+      - ./storage/db/test:/data/db
     environment:
-      - ME_CONFIG_MONGODB_SERVER=perso_mongo_test
-    ports:
-      - 9081:8081
+      - ENV=test
     networks:
       - test
   node_test:
@@ -21,10 +14,11 @@ services:
     build: node/
     environment:
       - ENV=test
+      - MONGO_URI=mongodb://perso_mongo_test
     ports:
-      - 81:80
+      - 80:80
     volumes:
-      - "./storage:/app/storage"
+      - "./storage/node/test:/app/storage"
     networks:
       - test
 networks:

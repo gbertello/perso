@@ -2,5 +2,6 @@
 mongo/db/
 node/app/public/img/prod
 certs/
-storage/
+storage
 deploy.sh
+*.json

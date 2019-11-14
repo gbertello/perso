@@ -1,1 +1,3 @@
+#!/bin/bash -ex
+
 docker-compose -f docker-compose-test.yml down
