@@ -1,7 +1,2 @@
-*.DS_Store
-mongo/db/
-node/app/public/img/prod
-certs/
+.DS_Store
 storage
-deploy.sh
-*.json

@@ -1,0 +1,29 @@
+version: '3.5'
+services:
+  mongo_local:
+    container_name: perso_mongo_local
+    build: mongo/
+    volumes:
+      - ./storage/db/local:/data/db
+    environment:
+      - ENV=local
+    networks:
+      - local
+  node_prod:
+    container_name: perso_node_local
+    build: node/
+    volumes:
+      - "./storage/node/local:/app/storage"
+    environment:
+      - ENV=local
+      - USER=${USER}
+      - PASSWORD=${PASSWORD}
+      - MONGO_URI=mongodb://perso_mongo_local
+    ports:
+      - 8080:80
+    networks:
+      - local
+networks:
+  local:
+    external:
+      name: local
