@@ -5,7 +5,7 @@ RUN npm install --save \
   pug@2.0.3 \
   mongodb@3.2.6 \
   express-basic-auth@1.2.0
-  
-COPY app /app
+
 WORKDIR /app
+COPY app/ .
 CMD node app.js

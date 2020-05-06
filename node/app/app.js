@@ -11,14 +11,14 @@ app.set('views', path.join(__dirname, 'views'));
 app.use('/perso/public', express.static(path.join(__dirname, 'public')));
 app.use('/perso/storage', express.static(path.join(__dirname, 'storage')));
 
-if (process.env.ENV == 'prod') {
+if (process.env.SYSTEM == 'prod') {
   var users = [];
   users[process.env.USER] = process.env.PASSWORD;
   app.use('/cv/lettre', basicAuth({challenge: true, users: users}));
 }
 
 var mongoUrl = process.env.MONGO_URI;
-  
+
 app.get('/', function(req, res){
   res.redirect('/livres');
 });
@@ -31,7 +31,7 @@ app.get('/cv', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
-      if (err) throw err; 
+      if (err) throw err;
       res.render('cv', {perso: result[0]});
     });
   });
@@ -51,9 +51,9 @@ app.get('/livres', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result_perso) {
-      if (err) throw err;  
+      if (err) throw err;
       db.db("perso").collection("books").find().toArray(function(err, result_books) {
-        if (err) throw err; 
+        if (err) throw err;
         res.render('books', {perso: result_perso[0], books: result_books});
       });
     });
