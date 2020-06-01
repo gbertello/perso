@@ -19,15 +19,7 @@ if (process.env.SYSTEM == 'prod') {
 
 var mongoUrl = "mongodb://" + process.env.IMAGE.replace("node", "mongo");
 
-app.get('/', function(req, res){
-  res.redirect('/livres');
-});
-
-app.get('/perso', function(req, res){
-  res.redirect('/livres');
-});
-
-app.get('/cv', function(req, res){
+app.get('/perso/cv', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
@@ -37,7 +29,7 @@ app.get('/cv', function(req, res){
   });
 });
 
-app.get('/cv/lettre', function(req, res){
+app.get('/perso/lettre', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result) {
@@ -47,7 +39,7 @@ app.get('/cv/lettre', function(req, res){
   });
 });
 
-app.get('/livres', function(req, res){
+app.get('/perso/livres', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result_perso) {
@@ -60,7 +52,7 @@ app.get('/livres', function(req, res){
   });
 });
 
-app.get('/piano', function(req, res){
+app.get('/perso/piano', function(req, res){
   MongoClient.connect(mongoUrl, function(err, db) {
     if (err) throw err;
     db.db("perso").collection("perso").find().toArray(function(err, result_perso) {
