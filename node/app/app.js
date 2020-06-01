@@ -62,4 +62,8 @@ app.get('/perso/piano', function(req, res){
   });
 });
 
+app.get('/perso', function(req, res){
+  res.redirect('/perso/livres');
+});
+
 app.listen(80);
