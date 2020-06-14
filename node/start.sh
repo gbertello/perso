@@ -26,7 +26,7 @@ stop -i $IMAGE &> /dev/null || true
 OPTIONS=""
 OPTIONS="$OPTIONS -v $VOLUME:$TARGET_VOLUME"
 
-if [[ $ENV -eq "prod" ]]
+if [[ $SYSTEM -eq "prod" ]]
 then
   OPTIONS="$OPTIONS -r always"
   OPTIONS="$OPTIONS -e USER=$USER|PASSWORD=$PASSWORD"
