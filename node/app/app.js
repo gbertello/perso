@@ -14,7 +14,7 @@ app.use('/perso/storage', express.static(path.join(__dirname, 'storage')));
 if (process.env.SYSTEM == 'prod') {
   var users = [];
   users[process.env.USER] = process.env.PASSWORD;
-  app.use('/lettre', basicAuth({challenge: true, users: users}));
+  app.use('/perso/lettre', basicAuth({challenge: true, users: users}));
 }
 
 var mongoUrl = "mongodb://" + process.env.IMAGE.replace("node", "mongo");
